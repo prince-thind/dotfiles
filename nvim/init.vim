@@ -1,7 +1,8 @@
 set number
 set noincsearch
-set clipboard=unnamed
+set clipboard=unnamedplus
 set autoread
+set mouse=a
 
 "au FocusLost * :wa
 autocmd BufWinEnter,WinEnter * :wa
@@ -83,5 +84,4 @@ inoremap <silent><expr> <Tab>
       \ coc#pum#visible() ? coc#pum#next(1) :
       \ CheckBackspace() ? "\<Tab>" :
       \ coc#refresh()
-
 

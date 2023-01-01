@@ -4,7 +4,11 @@ A repository which houses all useful config files. A useful way to work with con
 
 # links
 
-1. nvim/init.vim: `$HOME/.config/nvim/init.vim`
-2. bash/.bashrc: `$HOME/.bashrc`
-3. bash/.profile: `$HOME/.profile`
-3. git/.gitconfig: `$HOME/.gitconfig`
+```JS
+{
+    "nvim/init.vim'": "$HOME/.config/nvim/init.vim",
+    "bash/.bashrc": "$HOME/.bashrc",
+    "bash/.profile": "$HOME/.profile",
+    "git/.gitconfig": "$HOME/.gitconfig",
+}
+```

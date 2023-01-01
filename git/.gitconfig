@@ -1,1 +1,9 @@
-/home/prince/.gitconfig
+[user]
+	name = Prince Thind
+	email = princethind799@gmail.com
+[init]
+	defaultBranch = main
+[color]
+	ui = auto
+[pull]
+	rebase = false

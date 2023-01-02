@@ -10,5 +10,6 @@ A repository which houses all useful config files. A useful way to work with con
     "bash/.bashrc": "$HOME/.bashrc",
     "bash/.profile": "$HOME/.profile",
     "git/.gitconfig": "$HOME/.gitconfig",
+    "vscode/settings.json":"$HOME/.config/Code/User/settings.json"
 }
 ```

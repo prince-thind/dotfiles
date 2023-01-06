@@ -1,0 +1,37 @@
+#shell prompt customization
+#made as readable as possible
+
+#naming convention
+#aS: property A Start
+#aE: property A end
+
+eS='\[' #escape start
+eE='\]' #escape end
+
+titleS="${eS}\e]0;${eE}"
+titleE="${eS}\a${eE}"
+title="${titleS}\u@\h: \w${titleE}"
+
+accent1S="${eS}\033[01;32m${eE}" #green
+accent2S="${eS}\033[01;34m${eE}" #blue
+accent3S="${eS}\033[00;37m${eE}" #gray
+accent4S="${eS}\033[01;35m${eE}" #purple
+accent5S="${eS}\033[00;32m${eE}" #dark green
+accentE="${eS}\033[00m${eE}" #accent end
+
+
+chroot_status='${debian_chroot:+($debian_chroot)}'
+user="${accent1S}\u${accentE}"
+at_symbol="${accent5S}@${accentE}"
+host="${accent1S}\h${accentE}"
+pwd="${accent2S}\w${accentE}"
+dollar='\$'
+
+opening_b="${accent3S}[${accentE}" #opening bracket
+closing_b="${accent3S}]${accentE}" #closing bracket
+
+trail="${accent4S}->${accentE}"
+
+
+PS1="${title}${chroot_status}${opening_b}${user}${at_symbol}${host}:${pwd}${closing_b}\n${dollar}${trail} "
+export PS1

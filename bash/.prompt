@@ -16,7 +16,8 @@ accent1S="${eS}\033[01;32m${eE}" #green
 accent2S="${eS}\033[01;34m${eE}" #blue
 accent3S="${eS}\033[00;37m${eE}" #gray
 accent4S="${eS}\033[01;35m${eE}" #purple
-accent5S="${eS}\033[00;32m${eE}" #dark green
+accent5S="${eS}\033[00;36m${eE}" #dark cyan
+accent6S="${eS}\033[01;31m${eE}" #red
 accentE="${eS}\033[00m${eE}" #accent end
 
 
@@ -32,6 +33,15 @@ closing_b="${accent3S}]${accentE}" #closing bracket
 
 trail="${accent4S}->${accentE}"
 
+function create_prompt {
+    local exit_code="$?";
+    local exit_status="";
 
-PS1="${title}${chroot_status}${opening_b}${user}${at_symbol}${host}:${pwd}${closing_b}\n${dollar}${trail} "
-export PS1
+    if (( exit_code != 0 )); then
+        exit_status=" exit code: ${accent6S}${exit_code}${accentE}"
+    fi
+
+    PS1="${title}${chroot_status}${opening_b}${user}${at_symbol}${host}:${pwd}${closing_b}${exit_status}\n${dollar}${trail} "
+}
+
+PROMPT_COMMAND=create_prompt 

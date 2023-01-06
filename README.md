@@ -9,6 +9,7 @@ A repository which houses all useful config files. A useful way to work with con
     "nvim/init.vim'": "$HOME/.config/nvim/init.vim",
     "bash/.bashrc": "$HOME/.bashrc",
     "bash/.profile": "$HOME/.profile",
+    "bash/.prompt": "$HOME/.prompt",
     "git/.gitconfig": "$HOME/.gitconfig",
     "vscode/settings.json":"$HOME/.config/Code/User/settings.json"
 }

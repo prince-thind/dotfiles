@@ -8,9 +8,9 @@
 eS='\[' #escape start
 eE='\]' #escape end
 
-titleS="${eS}\e]0;${eE}"
-titleE="${eS}\a${eE}"
-title="${titleS}\u@\h: \w${titleE}"
+titleS="\e]0;"
+titleE="$\a"
+title="${eS}${titleS}\u@\h: \w${titleE}${eE}"
 
 accent1S="${eS}\033[01;32m${eE}" #green
 accent2S="${eS}\033[01;34m${eE}" #blue
@@ -27,6 +27,7 @@ at_symbol="${accent5S}@${accentE}"
 host="${accent1S}\h${accentE}"
 pwd="${accent2S}\w${accentE}"
 dollar='\$'
+newline="\n"
 
 opening_b="${accent3S}[${accentE}" #opening bracket
 closing_b="${accent3S}]${accentE}" #closing bracket
@@ -41,7 +42,7 @@ function create_prompt {
         exit_status=" exit code: ${accent6S}${exit_code}${accentE}"
     fi
 
-    PS1="${title}${chroot_status}${opening_b}${user}${at_symbol}${host}:${pwd}${closing_b}${exit_status}\n${dollar}${trail} "
+    PS1="${title}${chroot_status}${opening_b}${user}${at_symbol}${host}:${pwd}${closing_b}${exit_status}${newline}${dollar}${trail} "
 }
 
 PROMPT_COMMAND=create_prompt 

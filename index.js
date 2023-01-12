@@ -1,8 +1,7 @@
 import shell from 'shelljs';
 import fs from 'fs';
 
-const links=JSON.parse(fs.readFileSync('./links.json'),'utf8')
-
+import links from './links'
 
 for(const [repoFile,original] of Object.entries(links)){
     //delete original file

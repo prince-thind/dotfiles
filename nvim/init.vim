@@ -3,7 +3,7 @@ set noincsearch
 set clipboard=unnamedplus
 set autoread
 set mouse=a
-
+set nowrap
 "au FocusLost * :wa
 autocmd BufWinEnter,WinEnter * :wa
 
@@ -26,16 +26,16 @@ call plug#end()
 
 
 "start terminal
-set splitbelow
-if argc()>0
-e
-endif
-split term://bash 
-resize 12
+"set splitbelow
+"if argc()>0
+"e
+"endif
+"split term://bash 
+"resize 12
 
-autocmd BufWinEnter,WinEnter term://* | stopinsert | execute 'normal i'
+"autocmd BufWinEnter,WinEnter term://* | stopinsert | execute 'normal i'
 "autocmd BufWinEnter,WinEnter term://* startinsert
-autocmd BufLeave term://* stopinsert
+"autocmd BufLeave term://* stopinsert
 
 "start nerdtree
 au VimEnter *  NERDTree

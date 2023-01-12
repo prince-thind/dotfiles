@@ -1,0 +1,24 @@
+{
+  "name": "configs",
+  "version": "1.0.0",
+  "description": "A repository which houses all useful config files. A useful way to work with config files in git is to work here with hard links which link back to config files at their normal path. The links are described below for refernce or future setup.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/prince-thind/configs.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/prince-thind/configs/issues"
+  },
+  "homepage": "https://github.com/prince-thind/configs#readme",
+  "dependencies": {
+    "shelljs": "^0.8.5"
+  },
+  "type": "module"
+}

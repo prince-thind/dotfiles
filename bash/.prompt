@@ -40,6 +40,8 @@ function create_prompt {
 
     if (( exit_code != 0 )); then
         exit_status=" exit code: ${accent6S}${exit_code}${accentE}"
+    else
+        exit_status=" exit code: ${accent1S}${exit_code}${accentE}"
     fi
 
     PS1="${title}${chroot_status}${opening_b}${user}${at_symbol}${host}:${pwd}${closing_b}${exit_status}${newline}${dollar}${trail} "

@@ -1,9 +1,7 @@
 {
-  "files.autoSave": "onFocusChange",
   "git.confirmSync": false,
   "security.workspace.trust.banner": "never",
   "security.workspace.trust.startupPrompt": "never",
-  "security.workspace.trust.untrustedFiles": "never",
   "editor.minimap.enabled": false,
   "explorer.confirmDelete": false,
   "explorer.confirmDragAndDrop": false,
@@ -29,7 +27,7 @@
   "[scss]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
- 
+
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
@@ -41,5 +39,7 @@
   },
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-  }
+  },
+  "editor.formatOnSave": true,
+  "files.autoSave": "onFocusChange"
 }

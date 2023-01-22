@@ -119,7 +119,6 @@ fi
 # fnm
 export PATH="/home/prince/.local/share/fnm:$PATH"
 eval "`fnm env`"
-. "$HOME/.cargo/env"
 
 #shell prompt customization
 

@@ -7,5 +7,5 @@ for (const [repoFile, original] of Object.entries(links)) {
   shell.exec(`rm -f "${original}"`);
 
   //link repofile with original
-  shell.exec(`ln "${repoFile}" "${original}"`);
+  shell.exec(`ln -s "$(realpath ${repoFile})" "${original}"`);
 }

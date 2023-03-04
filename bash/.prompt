@@ -33,6 +33,7 @@ opening_b="${accent3S}[${accentE}" #opening bracket
 closing_b="${accent3S}]${accentE}" #closing bracket
 
 trail="${accent4S}->${accentE}"
+time="${accent1S}\D{%H:%M:%S}${accentE}"
 
 function create_prompt {
     local exit_code="$?";
@@ -42,9 +43,8 @@ function create_prompt {
         exit_status=" exit code: ${accent6S}${exit_code}${accentE}"
     else
         exit_status=" exit code: ${accent1S}${exit_code}${accentE}"
-    fi
+            fi
 
-    PS1="${title}${chroot_status}${opening_b}${user}${at_symbol}${host}:${pwd}${closing_b}${exit_status}${newline}${dollar}${trail} "
+            PS1="${title}${chroot_status}${opening_b}${user}${at_symbol}${host}:${pwd}:${time}${closing_b}${exit_status}${newline}${dollar}${trail} "
 }
-
-PROMPT_COMMAND=create_prompt 
+PROMPT_COMMAND=create_prompt
